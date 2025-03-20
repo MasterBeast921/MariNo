@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Hero Adventures</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Press Start 2P', cursive;
+      color: #00FFFF;
+    }
+
+    a {
+      color: #FF00FF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #00FF00;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #1A1A1A;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .cta-button {
+      background-color: #FF00FF;
+      color: #0A0A0A;
+      padding: 10px 20px;
+      border: none;
+      font-family: 'Press Start 2P', cursive;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      background-color: #00FF00;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      background-image: url('assets/images/background.png');
+      background-size: cover;
+    }
+
+    .hero-content {
+      max-width: 50%;
+    }
+
+    .hero-preview img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 50px;
+      text-align: center;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature {
+      background-color: #1A1A1A;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .feature img {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* Leaderboard Section */
+    .leaderboard {
+      padding: 50px;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #00FFFF;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1A1A1A;
+      margin-top: 50px;
+    }
+
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Pixel Hero Adventures">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#play">Play Now</a></li>
+        <li><a href="#leaderboard">Leaderboard</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#how-to-play">How to Play</a></li>
+      </ul>
+    </nav>
+    <button class="cta-button">Play Now</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Embark on a Pixelated Quest to Save the Universe!</h1>
+      <p>Jump, run, and attack your way through challenging levels.</p>
+      <button class="cta-button">Start Adventure</button>
+    </div>
+    <div class="hero-preview">
+      <img src="assets/images/hero.gif" alt="Game Preview">
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Game Features</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <img src="assets/images/powerup1.png" alt="Power-Ups">
+        <h3>Unique Power-Ups</h3>
+        <p>Collect shields, swords, and speed boots to enhance your abilities.</p>
+      </div>
+      <div class="feature">
+        <img src="assets/images/enemy1.png" alt="Enemies">
+        <h3>Challenging Enemies</h3>
+        <p>Defeat slimes, robots, and dragons to progress.</p>
+      </div>
+      <div class="feature">
+        <img src="assets/images/background.png" alt="Levels">
+        <h3>Multiple Levels</h3>
+        <p>Explore forests, dungeons, and space in this epic adventure.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leaderboard Section -->
+  <section class="leaderboard" id="leaderboard">
+    <h2>Leaderboard</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Player</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Player1</td>
+          <td>5000</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Player2</td>
+          <td>4500</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Player3</td>
+          <td>4000</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Pixel Hero Adventures. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">Twitter</a>
+      <a href="#">Discord</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <script>
+    // Add interactivity here (e.g., leaderboard updates, game integration)
+    document.querySelector('.cta-button').addEventListener('click', () => {
+      alert('Starting the game...');
+    });
+  </script>
+</body>
+</html>
